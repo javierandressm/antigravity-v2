@@ -1,0 +1,153 @@
+{
+  "network": {
+    "testnet": true
+  },
+  "risk": {
+    "margin_type": "ISOLATED",
+    "standard_trade_risk_pct": 1.25,
+    "high_confidence_trade_risk_pct": 1.5,
+    "max_trade_risk_pct_by_symbol": {
+      "HYPE": 1.25
+    },
+    "max_margin_pct_of_available_balance": 35.0,
+    "max_equity_drawdown_pct": 12.0,
+    "stopped_thesis_lock_hours": 24.0,
+    "slippage_reserve_pct": 0.05
+  },
+  "consensus": {
+    "minimum_confirmations": {
+      "major": 2,
+      "mid_cap": 2,
+      "high_beta": 2
+    },
+    "high_confidence_confirmations": 3,
+    "minimum_confirmations_by_symbol": {
+      "HYPE": 3
+    }
+  },
+  "leverage": {
+    "major": {
+      "standard": 4,
+      "high_confidence": 5
+    },
+    "mid_cap": {
+      "standard": 3,
+      "high_confidence": 4
+    },
+    "high_beta": {
+      "standard": 2,
+      "high_confidence": 3
+    }
+  },
+  "exits": {
+    "partial_close_pct": 25.0,
+    "runner_pct": 75.0,
+    "tp1_trigger_move_pct": 1.5,
+    "break_even_buffer_pct": 0.1,
+    "take_profit_atr_multiple": 2.0,
+    "trailing_stop_update_pct": 0.4
+  },
+  "atr": {
+    "interval": "4h",
+    "period": 14,
+    "stop_multiple": 1.5,
+    "anti_chase_interval": "15m",
+    "anti_chase_multiple": 0.5,
+    "anti_chase_max_pct_major": 0.5,
+    "anti_chase_max_pct_alt": 1.0
+  },
+  "operations": {
+    "max_concurrent_positions": 3,
+    "symbol_cooldown_minutes": 60,
+    "poll_interval_seconds": 5,
+    "settle_delay_seconds": 0.3,
+    "recv_window_ms": 5000,
+    "signal_http_timeout_seconds": 4,
+    "signal_error_log_interval_seconds": 60,
+    "startup_retry_seconds": 30,
+    "request_timeout_seconds": 4,
+    "protection_read_retry_attempts": 2,
+    "protection_read_retry_delay_seconds": 0.5,
+    "rate_limit_read_retry_max_wait_seconds": 10,
+    "position_mode_cache_seconds": 10,
+    "rate_limit_fallback_seconds": 60,
+    "exchange_info_cache_seconds": 30,
+    "execution_lock_timeout_seconds": 30,
+    "execution_lock_poll_seconds": 0.1,
+    "entry_order_lookup_attempts": 3,
+    "entry_order_lookup_interval_seconds": 0.5,
+    "cooling_off_retry_initial_seconds": 60,
+    "cooling_off_retry_multiplier": 1.5,
+    "cooling_off_retry_max_seconds": 600,
+    "cooling_off_log_interval_seconds": 60,
+    "income_history_limit": 1000,
+    "dashboard_candle_limit": 250,
+    "dashboard_ticker_cache_seconds": 3,
+    "dashboard_candle_cache_seconds": 5,
+    "heartbeat_interval_cycles": 6,
+    "heartbeat_offset_cycles": 1,
+    "fingerprint_history_limit": 100
+  },
+  "portfolio_exposure": {
+    "policy_version": "delta_capacity_conditional_v2",
+    "base_capacity": 3,
+    "research_capacity": 5,
+    "conditional_slots_enabled": false,
+    "observer_interval_seconds": 60,
+    "bar_interval": "4h",
+    "bar_seconds": 14400,
+    "lookback_bars": 180,
+    "min_return_observations": 60,
+    "market_refresh_seconds": 3600,
+    "market_max_age_seconds": 28800,
+    "snapshot_max_age_seconds": 90,
+    "correlation_threshold": 0.75,
+    "aggregate_sl_risk_cap_pct": 4.5,
+    "gross_notional_cap_pct": 250.0,
+    "margin_cap_pct": 60.0,
+    "free_margin_min_pct": 40.0
+  },
+  "runtime_supervisor": {
+    "poll_interval_seconds": 2,
+    "health_stale_seconds": 60,
+    "startup_health_timeout_seconds": 180,
+    "max_restarts": 3,
+    "crash_window_seconds": 1800,
+    "restart_backoff_seconds": [
+      5,
+      15,
+      30
+    ],
+    "startup_attempts_per_process": 1,
+    "startup_ambiguity_disarm_seconds": 30
+  },
+  "assets": {
+    "major": [
+      "BTC",
+      "ETH"
+    ],
+    "mid_cap": [
+      "BNB",
+      "SOL"
+    ]
+  },
+  "flip": {
+    "enabled": true,
+    "min_votes": 4,
+    "reopen_window_minutes": 30
+  },
+  "rebote": {
+    "enabled": true,
+    "lados": [
+      "SHORT"
+    ],
+    "ventana_h": 2,
+    "min_movimiento_atr": 1.5,
+    "rebote_min_pct": 25
+  },
+  "freno_shorts": {
+    "enabled": true,
+    "max_edad_min": 40,
+    "archivo": "freno_shorts_estado.json"
+  }
+}
