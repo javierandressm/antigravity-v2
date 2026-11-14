@@ -1,0 +1,33 @@
+# Credenciales y sesiones
+.env
+.env.*
+!.env.example
+*credentials*
+*secret*
+*usuarios*.json
+*sessions*
+*sesiones*
+*.pem
+*.key
+# Estado y datos operativos
+*.log
+*.jsonl
+*.db
+*.sqlite*
+*.lock
+*.tmp
+*.zip
+*agent_state*.json
+*supervisor_state*.json
+*audit*.json
+datos/
+research/
+backups/
+# Entorno local
+.venv/
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+.idea/
+.vscode/
