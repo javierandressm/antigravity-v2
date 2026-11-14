@@ -1,15 +1,30 @@
-<div align="center">
+<p align="center">
+  <img src="assets/cover.svg" alt="Antigravity V2 · Local quantitative trading engine" width="100%">
+</p>
 
-# ANTIGRAVITY V2
-### Motor cuantitativo local · Python · Binance Futures Testnet
+<p align="center">
+  <strong>Un motor de trading modular, desde la señal hasta la reconciliación.</strong><br>
+  Python · Binance Futures Testnet · Ejecución local
+</p>
 
-**Señales → política de riesgo → ejecución → reconciliación**
-
-</div>
+<p align="center">
+  <a href="#inicio-rápido">Empezar</a> ·
+  <a href="#arquitectura">Arquitectura</a> ·
+  <a href="#mapa-del-código">Explorar el código</a> ·
+  <a href="#estado-y-verificación">Verificación</a>
+</p>
 
 ---
 
 Antigravity V2 es un motor de trading escrito en Python que transforma señales de consenso en decisiones de ejecución, con cálculo del tamaño de posición, stops y seguimiento del estado de la cuenta. Esta edición pública funciona localmente y está limitada a **Binance Futures Testnet**.
+
+<table>
+<tr>
+<td width="33%" valign="top"><h3>01 · Señales</h3><p>Consenso de fuentes configurables, caché local y filtros antes de la entrada.</p></td>
+<td width="33%" valign="top"><h3>02 · Riesgo</h3><p>Tamaño de posición, apalancamiento y límites de exposición desde una política compartida.</p></td>
+<td width="33%" valign="top"><h3>03 · Ejecución</h3><p>Órdenes, stops y reconciliación del estado con el exchange.</p></td>
+</tr>
+</table>
 
 ## De un vistazo
 
@@ -77,6 +92,9 @@ python binance_autonomous_bot.py
 
 Una vez configurado, el motor puede enviar órdenes a **Testnet**. Al arrancar espera las condiciones de credenciales, datos y reconciliación necesarias. El primer escaneo puede tardar; no se incluyen señales precargadas.
 
+<details>
+<summary><strong>Mapa del código · abrir estructura</strong></summary>
+
 ## Mapa del código
 
 ```text
@@ -93,6 +111,8 @@ antigravity-v2/
 ├── .env.example                # Variables vacías
 └── requirements.txt
 ```
+
+</details>
 
 ## Datos y configuración
 
@@ -116,3 +136,7 @@ Adaptación del motor V2 a partir de snapshots anteriores a los cambios de V3 de
 ## Licencia
 
 Todavía no se ha seleccionado una licencia de redistribución. Publicar el código permite revisarlo; no concede por sí mismo una licencia de uso o redistribución.
+
+---
+
+<p align="center"><strong>ANTIGRAVITY V2</strong><br><sub>Local execution. Explicit risk. Observable state.</sub></p>
